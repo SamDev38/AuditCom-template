@@ -21,6 +21,19 @@
 
     <!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
     <form id="downloadForm">
+        <label for="firstName-box">Prénom</label>
+        <input id="firstName-box" type="text" name="firstName" required>
+
+        <label for="lastName-box">Nom</label>
+        <input id="lastName-box" type="text" name="lastName" required>
+
+        <label for="email-box">Email</label>
+        <input id="email-box" type="text" name="email" required>
+
+        <label for="">En cochant la case, j'accèpte recevoir la newsletter et télécharger le fichier</label>
+        <input type="checkbox" name="newsletterAgreement" required>
+
+        <button type="submit">Télécharger le rapport</button>
     </form>
 
 </body>
