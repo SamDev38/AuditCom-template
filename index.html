@@ -99,14 +99,7 @@
         </article>
     </section>
     
-    <form id="downloadForm">
-    <input type="text" name="lastName" placeholder="Nom">
-    <input type="text" name="firstName" placeholder="Prénom">
-    <input type="email" name="email" placeholder="Email">
-    <input type="checkbox" name="newsletterAgreement" id="consent">
-    <label for="consent">J'accepte de recevoir la newsletter</label>
-    <button type="submit">Télécharger</button>
-</form>
+
     <!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
     <h3 data-bind-global="count"></h3>
 
@@ -118,7 +111,7 @@
     <div id="messageContainer"></div>
 
     <!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
-    <form id="downloadForm">
+    <form action="https://auditcom.onrender.com/api" method="post">
 
         <label for="lastName-box">Nom</label>
         <input id="lastName-box" type="text" name="lastName" placeholder="Nom" required>
@@ -136,6 +129,7 @@
 
         <button type="submit">Télécharger</button>
     </form>
+
 
     <footer>
         <section id="link">
