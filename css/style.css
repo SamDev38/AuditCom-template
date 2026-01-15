@@ -72,6 +72,18 @@ section.yellow-style{
     background-color: var(--main-color);
 }
 
+/****** mobil *******/
+@media screen and (width < 460px) {
+
+h2{
+    font-size: 2rem;
+}
+h3[data-bind-global="count"] {
+    font-size: 30px;
+}
+
+}
+
 /********** section intro ************/
 #welcome {
     text-align: center;
@@ -147,6 +159,34 @@ section.yellow-style{
 }
 h3[data-bind-global="count"] {
     font-size: 30px;
+}
+#welcome>div p {
+    font-size: 0.75rem;
+}
+}
+
+/****** mobil *******/
+@media screen and (width < 460px) {
+
+    #main-element>div{
+    font-size: 70px;
+    margin-top: 10rem;
+    
+}
+#main-element>h1{
+
+    font-size: 30px;
+    margin-top: 2.5rem;    
+    
+}
+#main-element>h2{
+    font-size: 17px;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    
+}
+h3[data-bind-global="count"] {
+    font-size: 25px;
 }
 #welcome>div p {
     font-size: 0.75rem;
@@ -245,7 +285,7 @@ h3[data-bind-global="count"] {
 }
 
 /****** intermédiaire *******/
-@media screen and (460px < width < 750px) {
+@media screen and (width < 750px) {
 
 #introduction {
     grid-template-areas: "intro"
@@ -296,7 +336,7 @@ article.insight-item {
 }
 
 /****** intermédiaire *******/
-@media screen and (460px < width < 750px) {
+@media screen and (width < 750px) {
 
 #insights-container {
     grid-template-columns: 1fr;
@@ -306,6 +346,14 @@ article.insight-item {
     width: 100%;
 }
 
+}
+
+/****** mobil *******/
+@media screen and (width < 460px) {
+
+.insight-item>p {
+    font-size: 15px;
+}
 }
 
 /********** section call to action ***********/
@@ -323,6 +371,15 @@ article.insight-item {
 #call-to-action p:last-of-type{
     margin-bottom: 3rem;
 }
+
+/****** mobil *******/
+@media screen and (width < 460px) {
+
+#call-to-action a{
+    font-size: 10px;
+}
+}
+
 
 /*********** img séparator ************/
 #img-separator {
@@ -471,7 +528,7 @@ footer h2{
 
 }
 
-/****** intermédiaire *******/
+/****** mobil *******/
 @media screen and (width < 460px) {
 
 footer h2{
