@@ -1,8 +1,9 @@
 @import "reset.css";
+
 :root {
     --main-color: #FFDB00;
     --secondary-color: #FFF;
-    --third-color: #000;
+    --third-color: #180B6E;
 }
 
 /***************** Global *****************/
@@ -12,13 +13,16 @@ footer {
 
 section {
     background-color: var(--secondary-color);
-    
+
     /*overflow: scroll;
     overflow-y: auto;*/
-    
+
 }
 
-
+h1 {
+    color: var(--third-color);
+    font-size: 3rem;
+}
 
 /* remove scrollbar visually (Chrome, Safari, Edge (Chromium)) */
 section::-webkit-scrollbar {
@@ -31,7 +35,7 @@ header {
 }
 
 /************ Header *************/
-header{
+/*header{
     height: 40vh;
     display: flex;
     align-items: center;
@@ -51,196 +55,208 @@ header{
 
 #header-nav li:hover {
     background-color: #fde33a;
-}
+}*/
 
 /********** section intro ************/
-#test{
-    background-image: url("../img/backgroud-intro.png");
-}
-#welcome{
+#welcome {
     text-align: center;
     background: none;
-    
+
     top: 0;
     left: 0;
 }
 
-#welcome p{
-    font-size: 25px;
+#welcome p {
+    font-size: 1.25rem;
 }
-#welcome p:last-of-type{
+
+#welcome>p:last-of-type {
     margin-bottom: 2rem;
 }
-h3[data-bind-global="count"]{
+
+h3[data-bind-global="count"] {
     font-size: 40px;
 }
-a.btn{
-    color: white;
-    background-color: #000;
+
+a.btn {
+    color: var(--main-color);
+    background-color: var(--third-color);
     padding: 1rem;
     border-radius: 10px;
     text-decoration: none;
-   font-weight: bold;
-   letter-spacing: 1px;
+    font-weight: bold;
+    letter-spacing: 1px;
 
 }
 
+#welcome>div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#welcome>div p {
+    font-size: 1rem;
+}
+
+/*******Animated title **********/
+.loader {
+    width: fit-content;
+    font-size: 60px;
+    padding: 4rem 0rem 2rem 0rem;
+    width: 60%;
+
+
+    font-family: system-ui, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #0000;
+    -webkit-text-stroke: 1px #000;
+    --g: conic-gradient(#000 0 0) no-repeat text;
+    background: var(--g) 0, var(--g) 100%, var(--g) 0 0, var(--g) 0 100%;
+    animation: l5 7s linear infinite alternate;
+}
+
+@keyframes l5 {
+
+    0%,
+    100% {
+        background-size: 0 100%, 0 100%, 100% 0, 100% 0
+    }
+
+    50% {
+        background-size: 55% 100%, 55% 100%, 100% 0, 100% 0
+    }
+
+    50.01% {
+        background-size: 0 100%, 0 100%, 100% 55%, 100% 55%
+    }
+}
+
+
+/********* logo slide show *******/
+
+.logo-animation article {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: auto;
+
+}
+
+.logo-animation article img {
+    height: 120px;
+    width: auto;
+    margin-bottom: 1rem;
+
+}
+
+.logo-animation article h2 {
+    font-size: 15px;
+    font-weight: bold;
+    text-wrap: nowrap;
+
+}
+
+.logo-animation article p {
+    display: none;
+
+}
+
+.logo-animation {
+    display: flex;
+    gap: 4rem;
+}
+
+/***** animation logo slide show ****/
+.slider {
+    overflow: hidden;
+    margin-top: 5rem;
+    padding-bottom: 4rem;
+}
+
+.slider-track {
+    animation: alternate scroll 45s linear infinite;
+}
+
+
+/* Animation */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
 
 /************ intro *************/
 
-#introduction{
+#introduction {
     display: grid;
-    grid-template-areas: "intro intro description"
-                        "void1 void2 description";
-
-    grid-template-rows: 10vh auto;
-    grid-template-columns: auto auto auto;
+    grid-template-areas: "intro end"
+        "void description";
+    grid-template-columns: 0.5fr 1fr;
     gap: 0.5rem;
     justify-content: center;
     align-content: center;
     height: fit-content;
     padding: 2rem;
 }
-#introduction div:first-child{
-    grid-area: intro;
-    text-align: center;
-    align-self: center;
-    
+
+#introduction h1 {
+    justify-self: right;
+    color: #180B6E;
 }
 
-#introduction div p{
-    margin-bottom: 1rem;
-}
-#introduction div:nth-child(2){
-    grid-area: description;
-    height: fit-content;
-    
-}
-#introdution div:nth-child(3){
-    grid-area: void1;
-     
-}
-#introduction div:last-child{
-   grid-area: void2;
+#introduction div p {
+    margin: 1rem 0rem;
 }
 
-#introduction div{
-    
+#introduction div {
     border-radius: 20px;
-    border: 3px solid rgb(255, 239, 65);
     padding: 1rem 1rem;
 }
 
-/*******Animated title **********/
-.loader {
-  width: fit-content;
-  font-size: 60px;
-  padding: 4rem 1rem 2rem 1rem;
-    
-    
-  font-family: system-ui,sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #0000;
-  -webkit-text-stroke: 1px #000;
-  --g:conic-gradient(#000 0 0) no-repeat text;
-  background: var(--g) 0,var(--g) 100%,var(--g) 0 0,var(--g) 0 100%;
-  animation: l5 7s linear infinite alternate;
-}
-
-@keyframes l5 {
-  0%,100%{background-size: 0   100%,0   100%,100% 0  ,100% 0  }
-  50%    {background-size: 55% 100%,55% 100%,100% 0  ,100% 0  }
-  50.01% {background-size: 0   100%,0   100%,100% 55%,100% 55%}
-}
-
-
-/********* logo slide show *******/
-
-.logo-animation article{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    width: auto;
-    
-}
-.logo-animation article img{
-    height: 120px;
-    width: auto;
-    margin-bottom: 1rem;
-
-}
-.logo-animation article h2{
-    font-size: 15px;
-    font-weight: bold;
-    text-wrap: nowrap;
-
-}
-.logo-animation article p{
-display: none;
-
-}
-.logo-animation{
-    display: flex; 
-    gap: 4rem;
-}
-
-/***** animation logo slide show ****/
-.slider {
-  overflow: hidden;
-  margin-top: 5rem;
-  padding-bottom: 4rem;
-}
-
-.slider-track {
-  animation: alternate scroll 45s linear infinite;
-}
-
-
-/* Animation */
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-215%);
-  }
-}
-
-
 /************ Insight style*************/
 
-#insights-container{
-        display: grid;
+#insights-container {
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr));
     gap: 1rem;
     padding: 2rem;
 }
 
-.insight-item:nth-child(3) img, .insight-item:hover:nth-child(3)>div, .insight-item:nth-child(3)>p,
+/* .insight-item:nth-child(3) img, .insight-item:hover:nth-child(3)>div, .insight-item:nth-child(3)>p,
 .insight-item:nth-child(5) img, .insight-item:hover:nth-child(5)>div, .insight-item:nth-child(5)>p{
     border-radius: 100px;
-} 
+}  */
 
-.insight-item {
-    position: relative;
-    width: fit-content;
+article.insight-item {
+    /* position: relative;
+    width: fit-content; */
+    height: 40vh;
+    width: 30vw;
+
 }
 
-.insight-item>img {
+/*.insight-item>img {
     max-height: 50vh;
     border-radius: 20px;
-}
-.insight-item>div{
+}*/
+
+/* .insight-item>div{
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
-}
-.insight-item:hover img,
+    padding: 2rem;
+} */
+/* .insight-item:hover img,
 .insight-item:hover>p {
   opacity: 0;
-}
+} 
 
 .insight-item:hover>div {
   opacity: 1;
@@ -251,46 +267,70 @@ display: none;
   justify-items: center;
   background-color: var(--main-color);
   border: 3px solid rgb(255, 239, 65);
+  color: white;
   border-radius: 20px;
   transition: opacity 1s ease;
 }
 
+.insight-item:hover>div>h2{
+    font-size: 15px;
+    line-height: 15px;
+    padding-bottom: 1rem;
+}*/
 
-
-.insight-item>p{
-    background: linear-gradient(to left, transparent, var(--main-color));
+.insight-item>p {
+    background-color: var(--main-color);
     padding-right: 50%;
-    position: absolute;
+    /* position: absolute;
     top:0;
-    left: 0;
+    left: 0; */
     width: auto;
     height: 100%;
-    padding-left: 1.5rem;
+    padding: 2rem;
     align-content: center;
     font-size: 25px;
     font-weight: bold;
-    color: white;
+    color: #000;
     border-radius: 20px;
-
 }
 
-.insight-item img,
+.insight-item:nth-child(3)>p,
+.insight-item:nth-child(5)>p {
+    border-radius: 100px;
+}
+
+/* .insight-item img,
 .insight-item p {
   transition: opacity 1s ease;
-}
+} */
 
 /******** Style pour la liste *******/
-#teamList {
+/*#teamList {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1rem;
     padding: 2rem;
-}
+}*/
 
-#teamList article {
+/*#teamList article {
     border: 1px solid #ccc;
     padding: 1rem;
     border-radius: 8px;
+}*/
+/********** section call to action ***********/
+#call-to-action {
+    padding: 2rem;
+    align-content: center;
+    text-align: right;
+    justify-content: right;
+}
+
+/*********** img séparator ************/
+#img-separator {
+    background-image: url("../img/test.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 350px;
 }
 
 

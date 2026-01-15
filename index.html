@@ -9,6 +9,13 @@
     <script src="src/main.js" type="module" defer></script>
     <script src="src/scroll-reveal.js"></script>
 
+    <meta property="og:title" content="Titre de votre page optimisé pour les réseaux sociaux" />
+    <meta property="og:type" content="website" /> <!-- ou article, video, etc. -->
+    <meta property="og:url" content="https://www.votre-site.com/votre-page" />
+    <meta property="og:image" content="https://www.votre-site.com/images/votre-image-og.jpg" />
+    <meta property="og:description" content="Description courte et percutante de votre contenu" />
+    <meta property="og:site_name" content="Nom de votre site web" />
+
 </head>
 
 <body>
@@ -27,17 +34,22 @@
 
         <section id="welcome">
 
-            <h1 class="loader">Aujourd’hui, votre site web et vos réseaux ne génèrent ni supporters, ni sponsors !</h1>
-            <!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
+            <div>
+                <p>AUDITCOM</p>
+                <h1 class="loader">Aujourd’hui, votre site web ne génère ni supporters, ni sponsors !</h1>
+                <!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
+                <p>2026 EDITION</p>
+            </div>
 
             <p>Plus de </p>
             <h3 data-bind-global="count"></h3>
-            <p class="">club analysé !</p>
+            <p class="">clubs analysé !</p>
 
             <a href="#insights-container" class="btn">Voir les statistiques</a>
 
+
             <div class="slider">
-                <div class="logo-animation slider-track teamList">
+                <div id="teamList" class="logo-animation slider-track">
 
                 </div>
             </div>
@@ -45,34 +57,33 @@
     </section>
 
     <section id="introduction" class="yellow-style">
-        <div>introduction</div>
+        <h1>introduction</h1>
         <div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati expedita ex fugit sit eum aspernatur
-                at, assumenda eos, delectus similique quas, perspiciatis dolorum inventore. Distinctio eligendi quia ab
-                exercitationem modi.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, eius, vel laborum quo provident
-                voluptatibus necessitatibus deserunt delectus doloremque exercitationem molestiae sunt in excepturi cum
-                quis beatae dolorem reprehenderit quas.</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero quidem nam itaque voluptates incidunt
-                accusantium similique esse nobis quod, culpa maxime perferendis voluptatibus cumque sed magni delectus
-                rerum iure minus!</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis quibusdam illo maxime saepe
-                asperiores eos suscipit unde, nesciunt delectus quod provident dolore veniam nobis quis nisi
-                perspiciatis cum exercitationem officia!</p>
+            <p>Le paysage du sport professionnel vit une transformation numérique sans précédent, où la performance d'un
+                club ne se mesure plus uniquement sur le terrain, mais aussi à travers son empreinte digitale. Dans
+                cette optique, notre agence a initié une étude d'envergure dédiée à l’écosystème numérique des clubs de
+                football de Suisse romande.
+            </p>
+            <p>Ce rapport, réalisé par nos consultants juniors, propose une immersion complète dans la stratégie
+                digitale des équipes phares de la région. L'objectif est double : offrir une visibilité accrue aux
+                acteurs du football romand. Au total, ce sont 28 clubs qui ont été analysés.</p>
+            <p>À travers une méthodologies, chaque analyse décortique les points de contact entre le club et ses
+                supporters. De la gestion des réseaux sociaux à l'efficacité des plateformes web, ce document identifie
+                les forces en présence et propose des recommandations stratégiques concrètes, inspirées des meilleures
+                pratiques internationales.</p>
+
+                <a class="btn" href="#downloadForm">Télécharger</a>
         </div>
-        <div></div>
-        <div></div>
     </section>
 
 
     <section id="insights-container">
-        <h1>Quelques statistiques</h1>
+        <h1>Au-delà du Score: Pourquoi le Digital est Vital ?</h1>
 
         <article class="insight-item">
-
-            <img src="img/soccer-1280.jpg" alt="">
-            <p>80 % des sites n'attirent pas de nouveau sponsort et fans.</p>
-            <div>
+            <h2>80 % </h2>
+            <p>Des sites n'attirent pas de nouveau sponsort et fans.</p>
+            <!-- <div>
                 <h2>
                     Ils sont purement informationnel.
                 </h2>
@@ -81,14 +92,13 @@
                     les visiteurs repartent anonymes
                     les futurs sponsors ne voient aucune valeur et le trafic est gaspillé !
                 </p>
-            </div>
+            </div> -->
         </article>
 
         <article class="insight-item">
-
-            <img src="img/soccer-1280.jpg" alt="">
-            <p>90 % des clubs sont présents sur Facebook / Instagram, mais postent dans le vide...</p>
-            <div>
+<h2>90%</h2>
+            <p>Présents sur Facebook / Instagram, mais postent dans le vide...</p>
+            <!-- <div>
                 <h2>
                     Poster n’est pas une activité. C’est une stratégie !
                 </h2>
@@ -97,14 +107,13 @@
                     inexistant, un faible engagement long terme
                     et une impossibilité de toucher de nouvelles audiences.
                 </p>
-            </div>
+            </div> -->
         </article>
 
         <article class="insight-item">
-
-            <img src="img/soccer-1280.jpg" alt="">
-            <p>Moins de 30 % des clubs publient du contenu optimisé SEO de manière régulière</p>
-            <div>
+            <h2>30 %</h2>
+            <p>Des clubs sont réellement visible sur Google</p>
+            <!-- <div>
                 <h2>
                     Si Google ne vous trouve pas, les nouveaux supporters non plus.
                 </h2>
@@ -113,29 +122,27 @@
                     Aucun trafic hors requête de marque, une visibilité limitée sur google et aucune croissance sur les
                     mots clé choisis.
                 </p>
-            </div>
+            </div> -->
         </article>
 
         <article class="insight-item">
-
-            <img src="img/soccer-1280.jpg" alt="">
-            <p>Dans plus de 70 % des cas, TikTok, YouTube ou Reels sont inactifs ou sous-exploités.</p>
-            <div>
+            <h2>70%</h2>
+            <p>TikTok, YouTube ou Reels sont inactifs ou sous-exploités.</p>
+            <!-- <div>
                 <h2>
                     Vous communiquez pour ceux qui sont déjà là, pas pour ceux qui arrivent.
                 </h2>
                 <p>
-                    Un manque de formats immersifs, coulisses ou vidéo courte. Votre public devient vieillissant, vous
-                    avez une difficulté à attirer jeunes joueurs et supporters.
+                    Il y a un manque de formats immersifs, coulisses ou vidéo courte. Votre public devient vieillissant, vous
+                    avez une difficulté à attirer de nouveau supporters.
                 </p>
-            </div>
+            </div> -->
         </article>
 
         <article class="insight-item">
-
-            <img src="img/soccer-1280.jpg" alt="">
-            <p>Dans la majorité des clubs, la communication est assurée par des bénévoles non spécialisés</p>
-            <div>
+<h2>70%</h2>
+            <p>des clubs analysés sont sans newsletter ni formulaire actif</p>
+            <!-- <div>
                 <h2>
                     Un club géré comme un hobby sera perçu comme un hobby.
                 </h2>
@@ -143,18 +150,22 @@
                     Bonne volonté, mais pas de stratégie globale. Votre communication est incohérente et manque de
                     vision long terme. Votre club est perçu comme amateur.
                 </p>
-            </div>
+            </div> -->
         </article>
     </section>
-    <h1>C’est exactement pour résoudre cela que nous accompagnons les clubs.</h1>
-    <a href="#downloadForm" class="btn">Prendre contact et télécharger l'analyse de votre club !</a>
+
+    <section id="call-to-action" class="yellow-style">
+        <h1>C’est exactement pour résoudre cela que nous accompagnons les clubs.</h1>
+        <!-- <a href="#downloadForm" class="btn">Prendre contact et téléchargez l'analyse de votre club !</a> -->
+    </section>
+
 
 
     <!-- id="teamList" : Conteneur où seront ajoutés dynamiquement les éléments de l'équipe. Le nom de cet ID ne doit pas être modifié. -->
     <!--<section id="teamList" class="yellow-style">
     </section>-->
 
-    <section class="teamList">
+    <section id="img-separator">
 
     </section>
 
@@ -165,19 +176,19 @@
         <!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
         <form id="downloadForm" action="https://auditcom.onrender.com/api" method="post">
 
-            <label for="lastName-box">Nom</label>
+
             <input id="lastName-box" type="text" name="lastName" placeholder="Nom" required>
 
-            <label for="firstName-box">Prénom</label>
+
             <input id="firstName-box" type="text" name="firstName" placeholder="Prénom" required>
 
-            <label for="email-box">Email</label>
+
             <input id="email-box" type="email" name="email" placeholder="Email" required>
 
             <div id="consent-box">
+                <input id="consent" type="checkbox" name="newsletterAgreement">
                 <label for="consent">En cochant la case, j'accèpte recevoir la newsletter et télécharger le
                     fichier</label>
-                <input id="consent" type="checkbox" name="newsletterAgreement" required>
             </div>
 
             <button type="submit">Télécharger</button>
