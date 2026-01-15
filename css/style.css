@@ -13,10 +13,6 @@ footer {
 
 section {
     background-color: var(--secondary-color);
-
-    /*overflow: scroll;
-    overflow-y: auto;*/
-
 }
 
 h1 {
@@ -33,29 +29,6 @@ section.yellow-style,
 header {
     background-color: var(--main-color);
 }
-
-/************ Header *************/
-/*header{
-    height: 40vh;
-    display: flex;
-    align-items: center;
-}
-#header-nav {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-    justify-content: center;
-}
-
-#header-nav li {
-    font-size: 1rem;
-    padding: 2rem 6rem 2rem 6rem;
-}
-
-#header-nav li:hover {
-    background-color: #fde33a;
-}*/
 
 /********** section intro ************/
 #welcome {
@@ -228,14 +201,8 @@ a.btn {
     padding: 2rem;
 }
 
-/* .insight-item:nth-child(3) img, .insight-item:hover:nth-child(3)>div, .insight-item:nth-child(3)>p,
-.insight-item:nth-child(5) img, .insight-item:hover:nth-child(5)>div, .insight-item:nth-child(5)>p{
-    border-radius: 100px;
-}  */
 
 article.insight-item {
-    /* position: relative;
-    width: fit-content; */
     height: 40vh;
     width: 30vw;
     background-color: var(--main-color);
@@ -243,48 +210,7 @@ border-radius: 20px;
 
 }
 
-/*.insight-item>img {
-    max-height: 50vh;
-    border-radius: 20px;
-}*/
-
-/* .insight-item>div{
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    padding: 2rem;
-} */
-/* .insight-item:hover img,
-.insight-item:hover>p {
-  opacity: 0;
-} 
-
-.insight-item:hover>div {
-  opacity: 1;
-  pointer-events: auto;
-  width: 100%;
-  height: 100%;
-  align-content: center;
-  justify-items: center;
-  background-color: var(--main-color);
-  border: 3px solid rgb(255, 239, 65);
-  color: white;
-  border-radius: 20px;
-  transition: opacity 1s ease;
-}
-
-.insight-item:hover>div>h2{
-    font-size: 15px;
-    line-height: 15px;
-    padding-bottom: 1rem;
-}*/
-
 .insight-item>p {
-    
-    /* position: absolute;
-    top:0;
-    left: 0; */
     width: auto;
     padding: 2rem;
     align-content: center;
@@ -299,24 +225,6 @@ border-radius: 20px;
     border-radius: 100px;
 }
 
-/* .insight-item img,
-.insight-item p {
-  transition: opacity 1s ease;
-} */
-
-/******** Style pour la liste *******/
-/*#teamList {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1rem;
-    padding: 2rem;
-}*/
-
-/*#teamList article {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    border-radius: 8px;
-}*/
 /********** section call to action ***********/
 #call-to-action {
     padding: 2rem;
