@@ -1,7 +1,7 @@
 @import "reset.css";
 
 @font-face {
-    font-family: inter;
+    font-family: Inter;
     /* set name */
     src: url("../font/Inter_18pt-Regular.ttf");
     /* url of the font */
@@ -14,8 +14,15 @@
     /* url of the font */
 }
 
+@font-face {
+    font-family: ChivoMono;
+    /* set name */
+    src: url("../font/ChivoMono-Regular.ttf");
+    /* url of the font */
+}
+
 body {
-    font-family:inter, serif;
+    font-family:Inter, serif;
 }
 h1, h2, h3{
 font-family: Koulen, sans-serif;
@@ -28,21 +35,24 @@ font-family: Koulen, sans-serif;
 }
 
 /***************** Global *****************/
-footer {
-    background-color: var(--third-color);
-}
 
 section {
     background-color: var(--secondary-color);
 }
 
-h1 {
+h2 {
     color: var(--third-color);
     font-size: 3rem;
 }
+h2[data-bind="teamName"]{
+    color: #000;
+}
 
-section.yellow-style,
-header {
+h3{
+    font-size: 2rem;
+}
+
+section.yellow-style{
     background-color: var(--main-color);
 }
 
@@ -62,6 +72,32 @@ header {
 #welcome>p:last-of-type {
     margin-bottom: 2rem;
 }
+#main-element>div{
+   
+    font-family: Koulen, sans-serif;
+    font-size: 150px;
+    line-height: 0px;
+    margin-top: 10rem;
+    
+}
+#main-element>h1{
+   color: #000;
+    font-family: Koulen, sans-serif;
+    font-size: 90px;
+    line-height: 0rem;
+    margin-top: 7rem;    
+    
+}
+#main-element>h2{
+   
+    font-family: Koulen, sans-serif;
+    font-size: 30px;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    line-height: 0rem;
+    color: #000;
+    
+}
 
 h3[data-bind-global="count"] {
     font-size: 40px;
@@ -76,7 +112,7 @@ button {
     text-decoration: none;
     font-weight: bold;
     letter-spacing: 1px;
-
+   
 }
 
 #welcome>div {
@@ -117,7 +153,7 @@ button {
 }
 
 .logo-animation article img {
-    height: 120px;
+    height: 100px;
     width: auto;
     margin-bottom: 1rem;
 
@@ -177,7 +213,7 @@ button {
     padding: 2rem;
 }
 
-#introduction h1 {
+#introduction h2 {
     justify-self: right;
 }
 
@@ -185,9 +221,11 @@ button {
     margin: 2rem 0rem;
 }
 
-/* .intro-btn{
-    margin: 4rem 0rem;
-} */
+#introduction div p:last-of-type {
+    margin-bottom: 4rem;
+}
+
+ 
 
 #introduction div {
     border-radius: 20px;
@@ -204,7 +242,7 @@ button {
 }
 
 article.insight-item {
-    height: 40vh;
+    height: auto;
     width: 30vw;
     padding: 2rem;
     background-color: var(--main-color);
@@ -220,14 +258,13 @@ article.insight-item {
     width: auto;
     text-transform: uppercase;
     align-content: center;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     color: #000;
 }
 
-.insight-item:nth-child(3)>p,
-.insight-item:nth-child(5)>p {
-    border-radius: 100px;
+.insight-item:nth-child(3), .insight-item:nth-child(5) {
+    border-radius: 90px;
 }
 
 /********** section call to action ***********/
@@ -236,6 +273,14 @@ article.insight-item {
     align-content: center;
     text-align: right;
     justify-content: right;
+}
+#call-to-action p{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#call-to-action p:last-of-type{
+    margin-bottom: 3rem;
 }
 
 /*********** img séparator ************/
@@ -249,12 +294,15 @@ article.insight-item {
 
 
 /********* Style pour le formulaire ********/
-#form h1{
+#form{
+    padding-bottom: 4rem;
+}
+#form h2{
     text-align: center;
 }
 #downloadForm {
     max-width: 500px;
-    margin: 0rem auto;
+    margin: 0 auto;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -327,6 +375,29 @@ article.insight-item {
 /************ Footer style **************/
 footer {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
+    color: var(--secondary-color);
+    background-color: var(--third-color);
+    font-family: ChivoMono, sans-serif;
+    padding: 2rem 0rem 4rem 0rem;
+    
+}
+
+footer h2{
+color: var(--secondary-color);
+font-size: 1.5rem;
+letter-spacing: 1px;
+}
+
+#social{
+    display: flex;
+    gap: 1rem;
+}
+#social img{
+    height: 20px;
+    width: auto;
+}
+#contact>a{
+    text-decoration: none;
+    color: var(--secondary-color);
 }
