@@ -1,31 +1,14 @@
 @import "reset.css";
-
-@font-face {
-    font-family: Inter;
-    /* set name */
-    src: url("../font/Inter_18pt-Regular.ttf");
-    /* url of the font */
-}
-
-@font-face {
-    font-family: Koulen;
-    /* set name */
-    src: url("../font/Koulen-Regular.ttf");
-    /* url of the font */
-}
-
-@font-face {
-    font-family: ChivoMono;
-    /* set name */
-    src: url("../font/ChivoMono-Regular.ttf");
-    /* url of the font */
-}
+@import "font.css";
 
 body {
-    font-family:Inter, serif;
+    font-family: Inter, serif;
 }
-h1, h2, h3{
-font-family: Koulen, sans-serif;
+
+h1,
+h2,
+h3 {
+    font-family: Koulen, sans-serif;
 }
 
 :root {
@@ -44,11 +27,12 @@ h2 {
     color: var(--third-color);
     font-size: 3rem;
 }
-h2[data-bind="teamName"]{
+
+h2[data-bind="teamName"] {
     color: #000;
 }
 
-h3{
+h3 {
     font-size: 2rem;
 }
 
@@ -65,22 +49,22 @@ button {
     text-decoration: none;
     font-weight: bold;
     letter-spacing: 1px;
-   
 }
 
-section.yellow-style{
+section.yellow-style {
     background-color: var(--main-color);
 }
 
 /****** mobil *******/
 @media screen and (width < 460px) {
 
-h2{
-    font-size: 2rem;
-}
-h3[data-bind-global="count"] {
-    font-size: 30px;
-}
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3[data-bind-global="count"] {
+        font-size: 30px;
+    }
 
 }
 
@@ -88,7 +72,6 @@ h3[data-bind-global="count"] {
 #welcome {
     text-align: center;
     background: none;
-
     top: 0;
     left: 0;
 }
@@ -100,31 +83,30 @@ h3[data-bind-global="count"] {
 #welcome>p:last-of-type {
     margin-bottom: 2rem;
 }
-#main-element>div{
-   
+
+#main-element>div {
     font-family: Koulen, sans-serif;
     font-size: 150px;
     line-height: 0px;
     margin-top: 10rem;
-    
 }
-#main-element>h1{
-   color: #000;
+
+#main-element>h1 {
+    color: #000;
     font-family: Koulen, sans-serif;
     font-size: 90px;
     line-height: 0rem;
-    margin-top: 7rem;    
-    
+    margin-top: 7rem;
+
 }
-#main-element>h2{
-   
+
+#main-element>h2 {
     font-family: Koulen, sans-serif;
     font-size: 30px;
     margin-top: 4rem;
     margin-bottom: 3rem;
     line-height: 0rem;
     color: #000;
-    
 }
 
 
@@ -140,57 +122,57 @@ h3[data-bind-global="count"] {
 
 /****** intermédiaire *******/
 @media screen and (460px < width < 750px) {
-    #main-element>div{
-    font-size: 110px;
-    margin-top: 10rem;
-    
-}
-#main-element>h1{
+    #main-element>div {
+        font-size: 110px;
+        margin-top: 10rem;
+    }
 
-    font-size: 50px;
-    margin-top: 4rem;    
-    
-}
-#main-element>h2{
-    font-size: 20px;
-    margin-top: 2.25rem;
-    margin-bottom: 2rem;
-    
-}
-h3[data-bind-global="count"] {
-    font-size: 30px;
-}
-#welcome>div p {
-    font-size: 0.75rem;
-}
+    #main-element>h1 {
+        font-size: 50px;
+        margin-top: 4rem;
+    }
+
+    #main-element>h2 {
+        font-size: 20px;
+        margin-top: 2.25rem;
+        margin-bottom: 2rem;
+    }
+
+    h3[data-bind-global="count"] {
+        font-size: 30px;
+    }
+
+    #welcome>div p {
+        font-size: 0.75rem;
+    }
 }
 
 /****** mobil *******/
 @media screen and (width < 460px) {
 
-    #main-element>div{
-    font-size: 70px;
-    margin-top: 10rem;
-    
-}
-#main-element>h1{
+    #main-element>div {
+        font-size: 70px;
+        margin-top: 10rem;
+    }
 
-    font-size: 30px;
-    margin-top: 2.5rem;    
-    
-}
-#main-element>h2{
-    font-size: 17px;
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
-    
-}
-h3[data-bind-global="count"] {
-    font-size: 25px;
-}
-#welcome>div p {
-    font-size: 0.75rem;
-}
+    #main-element>h1 {
+        font-size: 30px;
+        margin-top: 2.5rem;
+    }
+
+    #main-element>h2 {
+        font-size: 17px;
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    h3[data-bind-global="count"] {
+        font-size: 25px;
+    }
+
+    #welcome>div p {
+        font-size: 0.75rem;
+    }
 }
 
 /********* logo slide show *******/
@@ -200,26 +182,22 @@ h3[data-bind-global="count"] {
     flex-direction: column;
     align-content: center;
     width: 120px;
-
 }
 
 .logo-animation article img {
     height: 110px;
     width: auto;
     margin-bottom: 1rem;
-
 }
 
 .logo-animation article h2 {
     font-size: 15px;
     font-weight: bold;
     text-wrap: nowrap;
-
 }
 
 .logo-animation article p {
     display: none;
-
 }
 
 .logo-animation {
@@ -256,7 +234,7 @@ h3[data-bind-global="count"] {
 #introduction {
     display: grid;
     grid-template-areas: "intro void"
-                         "void description";
+        "void description";
     grid-template-columns: 0.5fr 1fr;
     gap: 0.5rem;
     justify-content: center;
@@ -277,8 +255,6 @@ h3[data-bind-global="count"] {
     margin-bottom: 4rem;
 }
 
- 
-
 #introduction div {
     border-radius: 20px;
     padding: 1rem 1rem;
@@ -287,17 +263,15 @@ h3[data-bind-global="count"] {
 /****** intermédiaire *******/
 @media screen and (width < 750px) {
 
-#introduction {
-    grid-template-areas: "intro"
-                         "description";
-    grid-template-columns: 1fr;
+    #introduction {
+        grid-template-areas: "intro"
+            "description";
+        grid-template-columns: 1fr;
+    }
 
-}
-
-#introduction h2 {
-    justify-self: left;
-}
-
+    #introduction h2 {
+        justify-self: left;
+    }
 }
 
 /************ Insight style*************/
@@ -331,29 +305,31 @@ article.insight-item {
     color: #000;
 }
 
-.insight-item:nth-child(3), .insight-item:nth-child(5) {
+.insight-item:nth-child(3),
+.insight-item:nth-child(5) {
     border-radius: 90px;
 }
 
 /****** intermédiaire *******/
 @media screen and (width < 750px) {
 
-#insights-container {
-    grid-template-columns: 1fr;
-}
-article.insight-item {
-    height: auto;
-    width: 100%;
-}
+    #insights-container {
+        grid-template-columns: 1fr;
+    }
+
+    article.insight-item {
+        height: auto;
+        width: 100%;
+    }
 
 }
 
 /****** mobil *******/
 @media screen and (width < 460px) {
 
-.insight-item>p {
-    font-size: 15px;
-}
+    .insight-item>p {
+        font-size: 15px;
+    }
 }
 
 /********** section call to action ***********/
@@ -361,23 +337,23 @@ article.insight-item {
     padding: 2rem;
     align-content: center;
     text-align: right;
-    
 }
-#call-to-action p{
+
+#call-to-action p {
     font-size: 16px;
     font-weight: bold;
 }
 
-#call-to-action p:last-of-type{
+#call-to-action p:last-of-type {
     margin-bottom: 3rem;
 }
 
 /****** mobil *******/
 @media screen and (width < 460px) {
 
-#call-to-action a{
-    font-size: 10px;
-}
+    #call-to-action a {
+        font-size: 10px;
+    }
 }
 
 
@@ -385,19 +361,20 @@ article.insight-item {
 #img-separator {
     background-image: url("../img/Football_in_Bloomington\,_Indiana\,_1995.jpg");
     background-size: cover;
-
     background-repeat: no-repeat;
     height: 450px;
 }
 
 
 /********* Style pour le formulaire ********/
-#form{
+#form {
     padding-bottom: 4rem;
 }
-#form h2{
+
+#form h2 {
     text-align: center;
 }
+
 #downloadForm {
     max-width: 500px;
     margin: 0 auto;
@@ -407,15 +384,17 @@ article.insight-item {
     gap: 1rem;
 }
 
-#inline{
+#inline {
     display: flex;
     width: 100%;
     gap: 0.5rem;
 }
+
 #inline input {
     flex: 1;
     min-width: 0;
 }
+
 #downloadForm input {
     padding: 0.5rem;
     border-radius: 10px;
@@ -423,10 +402,12 @@ article.insight-item {
     background-color: var(--main-color);
     text-align: center;
 }
-#downloadForm input:target{
+
+#downloadForm input:target {
     border: none;
     outline-style: none;
 }
+
 #downloadForm>button {
     border-style: none;
 }
@@ -441,8 +422,6 @@ article.insight-item {
 #messageContainer {
     max-width: 500px;
     margin: 0rem auto;
-
-  
 }
 
 #messageContainer>aside {
@@ -470,13 +449,14 @@ article.insight-item {
 }
 
 /*************** progress barre ***************/
-.progress-container{
+.progress-container {
     text-align: center;
 }
 
-.progress-bar{
+.progress-bar {
     width: 100%;
 }
+
 /*progress::-webkit-progress-bar{
     border-radius: 5px;
     background-color: #FFEB74;
@@ -494,24 +474,25 @@ footer {
     background-color: var(--third-color);
     font-family: ChivoMono, sans-serif;
     padding: 2rem 0rem 4rem 0rem;
-    
 }
 
-footer h2{
-color: var(--secondary-color);
-font-size: 1.5rem;
-letter-spacing: 1px;
+footer h2 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
 }
 
-#social{
+#social {
     display: flex;
     gap: 1rem;
 }
-#social img{
+
+#social img {
     height: 20px;
     width: auto;
 }
-#contact>a{
+
+#contact>a {
     text-decoration: none;
     color: var(--secondary-color);
 }
@@ -519,23 +500,26 @@ letter-spacing: 1px;
 /****** intermédiaire *******/
 @media screen and (width < 750px) {
 
-footer h2{
-    font-size: 1rem;
-}
-#contact>a, #credits{
-    font-size: 0.75rem;
-}
+    footer h2 {
+        font-size: 1rem;
+    }
+
+    #contact>a,
+    #credits {
+        font-size: 0.75rem;
+    }
 
 }
 
 /****** mobil *******/
 @media screen and (width < 460px) {
 
-footer h2{
-    font-size: 0.75rem;
-}
-#contact>a, #credits{
-    font-size: 0.5rem;
-}
+    footer h2 {
+        font-size: 0.75rem;
+    }
 
+    #contact>a,
+    #credits {
+        font-size: 0.5rem;
+    }
 }

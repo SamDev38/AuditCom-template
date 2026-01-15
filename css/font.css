@@ -1,0 +1,20 @@
+@font-face {
+    font-family: Inter;
+    /* set name */
+    src: url("../font/Inter_18pt-Regular.ttf");
+    /* url of the font */
+}
+
+@font-face {
+    font-family: Koulen;
+    /* set name */
+    src: url("../font/Koulen-Regular.ttf");
+    /* url of the font */
+}
+
+@font-face {
+    font-family: ChivoMono;
+    /* set name */
+    src: url("../font/ChivoMono-Regular.ttf");
+    /* url of the font */
+}
