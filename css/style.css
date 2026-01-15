@@ -52,6 +52,22 @@ h3{
     font-size: 2rem;
 }
 
+h3[data-bind-global="count"] {
+    font-size: 40px;
+}
+
+a.btn,
+button {
+    color: var(--secondary-color);
+    background-color: var(--third-color);
+    padding: 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+   
+}
+
 section.yellow-style{
     background-color: var(--main-color);
 }
@@ -99,21 +115,6 @@ section.yellow-style{
     
 }
 
-h3[data-bind-global="count"] {
-    font-size: 40px;
-}
-
-a.btn,
-button {
-    color: var(--secondary-color);
-    background-color: var(--third-color);
-    padding: 1rem;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 1px;
-   
-}
 
 #welcome>div {
     display: flex;
@@ -125,22 +126,32 @@ button {
     font-size: 1rem;
 }
 
-/*******Animated title **********/
-.loader {
-    width: fit-content;
-    font-size: 60px;
-    padding: 4rem 0rem 2rem 0rem;
-    width: 60%;
-    font-family: system-ui, 'Segoe UI', sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #0000;
-    -webkit-text-stroke: 1px #000;
-    --g: conic-gradient(#000 0 0) no-repeat text;
-    background: var(--g) 0, var(--g) 100%, var(--g) 0 0, var(--g) 0 100%;
+/****** intermédiaire *******/
+@media screen and (460px < width < 750px) {
+    #main-element>div{
+    font-size: 110px;
+    margin-top: 10rem;
     
 }
+#main-element>h1{
 
+    font-size: 50px;
+    margin-top: 4rem;    
+    
+}
+#main-element>h2{
+    font-size: 20px;
+    margin-top: 2.25rem;
+    margin-bottom: 2rem;
+    
+}
+h3[data-bind-global="count"] {
+    font-size: 30px;
+}
+#welcome>div p {
+    font-size: 0.75rem;
+}
+}
 
 /********* logo slide show *******/
 
@@ -153,7 +164,7 @@ button {
 }
 
 .logo-animation article img {
-    height: 100px;
+    height: 110px;
     width: auto;
     margin-bottom: 1rem;
 
@@ -175,6 +186,7 @@ button {
     display: flex;
     gap: 4rem;
 }
+
 
 /***** animation logo slide show ****/
 .slider {
@@ -203,8 +215,8 @@ button {
 
 #introduction {
     display: grid;
-    grid-template-areas: "intro end"
-        "void description";
+    grid-template-areas: "intro void"
+                         "void description";
     grid-template-columns: 0.5fr 1fr;
     gap: 0.5rem;
     justify-content: center;
@@ -230,6 +242,22 @@ button {
 #introduction div {
     border-radius: 20px;
     padding: 1rem 1rem;
+}
+
+/****** intermédiaire *******/
+@media screen and (460px < width < 750px) {
+
+#introduction {
+    grid-template-areas: "intro"
+                         "description";
+    grid-template-columns: 1fr;
+
+}
+
+#introduction h2 {
+    justify-self: left;
+}
+
 }
 
 /************ Insight style*************/
@@ -267,12 +295,25 @@ article.insight-item {
     border-radius: 90px;
 }
 
+/****** intermédiaire *******/
+@media screen and (460px < width < 750px) {
+
+#insights-container {
+    grid-template-columns: 1fr;
+}
+article.insight-item {
+    height: auto;
+    width: 100%;
+}
+
+}
+
 /********** section call to action ***********/
 #call-to-action {
     padding: 2rem;
     align-content: center;
     text-align: right;
-    justify-content: right;
+    
 }
 #call-to-action p{
     font-size: 16px;
@@ -347,15 +388,14 @@ article.insight-item {
   
 }
 
-#messageContainer>div {
+#messageContainer>aside {
     border-radius: 10px;
     border: 3px solid;
     padding: 0.75rem;
     margin: 1rem;
 }
 
-.message>p {
-    padding: 1.5rem;
+#messageContainer>aside>p {
     border-radius: 4px;
     font-weight: 500;
 }
@@ -371,6 +411,23 @@ article.insight-item {
     color: #721c24;
     border-color: #721c24;
 }
+
+/*************** progress barre ***************/
+.progress-container{
+    text-align: center;
+}
+
+.progress-bar{
+    width: 100%;
+}
+/*progress::-webkit-progress-bar{
+    border-radius: 5px;
+    background-color: #FFEB74;
+}
+progress::-webkit-progress-value{
+    border-radius: 5px;
+    background-color: var(--third-color);
+}*/
 
 /************ Footer style **************/
 footer {
@@ -400,4 +457,28 @@ letter-spacing: 1px;
 #contact>a{
     text-decoration: none;
     color: var(--secondary-color);
+}
+
+/****** intermédiaire *******/
+@media screen and (width < 750px) {
+
+footer h2{
+    font-size: 1rem;
+}
+#contact>a, #credits{
+    font-size: 0.75rem;
+}
+
+}
+
+/****** intermédiaire *******/
+@media screen and (width < 460px) {
+
+footer h2{
+    font-size: 0.75rem;
+}
+#contact>a, #credits{
+    font-size: 0.5rem;
+}
+
 }
