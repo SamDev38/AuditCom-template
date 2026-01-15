@@ -18,7 +18,7 @@ const API_ENDPOINTS = {
 };
 
 const SELECTORS = {
-  teamList: "#teamList",
+  teamList: ".teamList",
   downloadForm: "#downloadForm",
   messageContainer: "#messageContainer",
 };
