@@ -12,9 +12,9 @@ footer {
 
 section {
     background-color: var(--secondary-color);
-    height: 100vh;
-    overflow: scroll;
-    overflow-y: auto;
+    
+    /*overflow: scroll;
+    overflow-y: auto;*/
     
 }
 
@@ -53,12 +53,11 @@ header{
     background-color: #fde33a;
 }
 
-
 /********** section intro ************/
 #test{
-    background-image: url("../img/Group\ 79.png");
+    background-image: url("../img/backgroud-intro.png");
 }
-#introduction{
+#welcome{
     text-align: center;
     background: none;
     
@@ -66,10 +65,10 @@ header{
     left: 0;
 }
 
-#introduction p{
+#welcome p{
     font-size: 25px;
 }
-#introduction p:last-of-type{
+#welcome p:last-of-type{
     margin-bottom: 2rem;
 }
 h3[data-bind-global="count"]{
@@ -87,6 +86,50 @@ a.btn{
 }
 
 
+/************ intro *************/
+
+#introduction{
+    display: grid;
+    grid-template-areas: "intro intro description"
+                        "void1 void2 description";
+
+    grid-template-rows: 10vh auto;
+    grid-template-columns: auto auto auto;
+    gap: 0.5rem;
+    justify-content: center;
+    align-content: center;
+    height: fit-content;
+    padding: 2rem;
+}
+#introduction div:first-child{
+    grid-area: intro;
+    text-align: center;
+    align-self: center;
+    
+}
+
+#introduction div p{
+    margin-bottom: 1rem;
+}
+#introduction div:nth-child(2){
+    grid-area: description;
+    height: fit-content;
+    
+}
+#introdution div:nth-child(3){
+    grid-area: void1;
+     
+}
+#introduction div:last-child{
+   grid-area: void2;
+}
+
+#introduction div{
+    
+    border-radius: 20px;
+    border: 3px solid rgb(255, 239, 65);
+    padding: 1rem 1rem;
+}
 
 /*******Animated title **********/
 .loader {
@@ -146,7 +189,7 @@ display: none;
 .slider {
   overflow: hidden;
   margin-top: 5rem;
-  margin-bottom: 4rem;
+  padding-bottom: 4rem;
 }
 
 .slider-track {
@@ -173,10 +216,15 @@ display: none;
     gap: 1rem;
     padding: 2rem;
 }
+
+.insight-item:nth-child(3) img, .insight-item:hover:nth-child(3)>div, .insight-item:nth-child(3)>p,
+.insight-item:nth-child(5) img, .insight-item:hover:nth-child(5)>div, .insight-item:nth-child(5)>p{
+    border-radius: 100px;
+} 
+
 .insight-item {
     position: relative;
     width: fit-content;
-    
 }
 
 .insight-item>img {
