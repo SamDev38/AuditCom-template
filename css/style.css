@@ -88,7 +88,7 @@ section.yellow-style {
     font-family: Koulen, sans-serif;
     font-size: 150px;
     line-height: 0px;
-    margin-top: 10rem;
+    margin-top: 8rem;
 }
 
 #main-element>h1 {
@@ -473,7 +473,7 @@ footer {
     color: var(--secondary-color);
     background-color: var(--third-color);
     font-family: ChivoMono, sans-serif;
-    padding: 2rem 0rem 4rem 0rem;
+    padding: 2rem 0rem 3rem 0rem;
 }
 
 footer h2 {
