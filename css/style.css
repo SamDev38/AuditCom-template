@@ -1,8 +1,9 @@
 @import "reset.css";
 @import "font.css";
 
-body {
+html, body {
     font-family: Inter, serif;
+    scroll-behavior: smooth;
 }
 
 h1,
@@ -255,6 +256,7 @@ section.yellow-style {
 
 #introduction div p {
     margin: 2rem 0rem;
+    font-size: 17px;
 }
 
 #introduction div p:last-of-type {
@@ -475,6 +477,14 @@ progress::-webkit-progress-bar{
 progress::-webkit-progress-value{
     border-radius: 5px;
     background-color: var(--third-color);
+}
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+   appearance: none;
+
+  width: 250px;
+  height: 20px;
 }
 
 /************ Footer style **************/
